@@ -50,17 +50,17 @@ const Navbar = ({ theme, setTheme }) => {
             className="h-9 w-auto rounded-md shadow-sm animate-float"
           />
           <div>
-            <div className="text-sm font-semibold leading-tight">
+            <div className="text-lg font-semibold leading-tight">
               AP Software
             </div>
-            <div className="text-[11px] text-slate-500 dark:text-gray-400 leading-tight">
+            {/* <div className="text-[11px] text-slate-500 dark:text-gray-400 leading-tight">
               PHP &amp; React Development
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-6 text-md">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -151,10 +151,10 @@ const Hero = () => {
       <div className="relative max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10 animate-fade-in">
         {/* Left text */}
         <div className="flex-1">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100/80 dark:bg-slate-800/70 border border-slate-200 dark:border-white/10 text-xs text-slate-700 dark:text-gray-200 mb-4">
+          {/* <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100/80 dark:bg-slate-800/70 border border-slate-200 dark:border-white/10 text-xs text-slate-700 dark:text-gray-200 mb-4">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             PHP · React · MySQL · Laravel · Node.js
-          </span>
+          </span> */}
 
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-slate-900 dark:text-white">
             We build{" "}
@@ -500,41 +500,7 @@ const Projects = () => {
     },
   ];
 
-  return (
-    <section id="projects" className="py-14 md:py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="section-title">Selected projects</h2>
-          <p className="section-subtitle">
-            Here are some examples of real applications we have worked on using
-            React and backend technologies.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-6 text-xs">
-          {projects.map((p) => (
-            <div
-              key={p.name}
-              className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-slate-900/80 p-5 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/25 transition-all"
-            >
-              <div className="text-[11px] text-primary-700 dark:text-primary-200 mb-1">
-                {p.type}
-              </div>
-              <h3 className="text-sm font-semibold mb-2 text-slate-900 dark:text-white">
-                {p.name}
-              </h3>
-              <p className="text-slate-700 dark:text-gray-300 mb-3">
-                {p.desc}
-              </p>
-              <div className="text-[11px] text-slate-500 dark:text-gray-400">
-                Tech stack: {p.stack}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
 };
 
 const Engagement = () => {
